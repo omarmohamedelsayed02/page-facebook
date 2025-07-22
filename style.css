@@ -1,0 +1,502 @@
+/* General Styles - التنسيقات العامة */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f0f2f5; 
+    color: #1c1e21; 
+    direction: rtl; 
+    text-align: right;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 980px; 
+    margin: 2px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+}
+
+/* --- Header - رأس الصفحة (شريط فيسبوك العلوي) --- */
+.facebook-header {
+    background-color: #ecedef; 
+    color: #fff;
+    padding: 4px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1em;
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.facebook-header .right {
+    display: flex;
+    align-items: center;
+}
+
+.facebook-header .logo img {
+    width: 40px; 
+    height: 40px;
+    margin-left: 15px; 
+    vertical-align: middle;
+}
+
+.facebook-header input[type="text"] {
+    border: none;
+    text-align: center;
+    border-radius: 50px;
+    padding: 14px 19px 15px 40px; 
+    background-color: #fff;
+    color: #606770;
+    font-size: 0.9em;
+    width: 200px;
+    outline: none;
+}
+
+.facebook-header .search-bar { 
+    position: relative; 
+    margin-right: 15px;
+}
+
+
+.facebook-header .right img[src*="search.png"] { 
+    position: absolute;
+    right: 2cm; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px; 
+    height: 26px; 
+    z-index: 1; 
+    padding-top: 7px; 
+    
+    right: calc(2cm + 5px); 
+    padding-top: 0;
+    top: 50%; 
+    transform: translateY(-50%); 
+    pointer-events: none; 
+}
+
+.header-section.center img
+{
+  width: 28px;
+  padding-left: 100px;
+  height: 25px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.header-section.left img {
+    position: relative; left: 1cm;
+    padding: 10px ;
+  width: 28px;
+  height: 25px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.header-section.center img:hover,
+.header-section.left img:hover {
+  opacity: 1;
+}
+
+/* --- Cover Photo & Profile Picture - صورة الغلاف وصورة البروفايل --- */
+.profile-header {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px; }
+
+.cover-photo {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.profile-picture-container {
+    position: absolute ; bottom: 4cm;
+margin-bottom: 145px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+   
+    width: 170px; 
+    height: 170px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-picture {
+   position: absolute; 
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.page-info {
+     margin-top: 20px;
+    padding: 30px 50px 20px; 
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.page-info h1 {
+    font-size: 2.2em;
+    margin: 0;
+    color: #1c1e21;
+}
+
+.page-info p {
+    color: #65676b;
+    font-size: 1.1em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.page-info button {
+    background-color: #e4e6eb; 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #1c1e21;
+    cursor: pointer;
+    margin-left: 10px; /
+    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.page-info button:hover {
+    background-color: #2652c3;
+    color: white;
+}
+
+
+.page-info button .fa-thumbs-up {
+    color: #4267B2; 
+}
+
+.page-info button .fa-thumbs-up:hover {color: #eaeaeb;}
+
+.page-nav {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 0 50px;
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: wrap; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.page-nav a {
+    text-decoration: none;
+    color: #65676b;
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-bottom: 3px solid transparent; 
+}
+.page-nav a:hover {
+    background-color: #f2f2f2;
+}
+
+.page-nav a.active {
+    color: #4267B2; 
+    border-bottom-color: #4267B2;
+}
+
+/* --- Main Content - منطقة المحتوى الرئيسية --- */
+.main-content {
+    display: flex;
+    padding: 20px;
+    gap: 20px; 
+    flex-wrap: wrap; 
+    align-items: flex-start;
+}
+
+.left-column, .right-column {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.left-column {
+    flex: 2; 
+    min-width: 300px; 
+}
+
+.right-column {
+    flex: 1;
+    min-width: 250px; 
+}
+
+/* --- About Section - قسم حول --- */
+.about-section h3, .photos-section h3 {
+    font-size: 1.3em;
+    color: #1c1e21;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: #65676b;
+}
+
+.about-item .icon {
+    margin-left: 10px; 
+    color: #65676b;
+}
+
+/* --- Photos Section - قسم الصور --- */
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5px; 
+}
+
+.photos-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* --- Posts/Timeline - قسم المنشورات --- */
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-box {
+    background-color: #fff !important; 
+    text-align: right !important; 
+    padding: 15px !important;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; 
+}
+
+.create-post-box p {
+    margin: 0;
+    color: #65676b;
+    font-size: 1em;
+}
+
+.post .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.post .post-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px; 
+}
+
+.post .post-author {
+    font-weight: 600;
+    color: #1c1e21;
+}
+
+.post .post-time {
+    font-size: 0.85em;
+    color: #65676b;
+    margin-right: 5px;
+}
+
+.post .post-content p {
+    margin-top: 0;
+    font-size: 1em;
+    color: #1c1e21;
+    margin-bottom: 10px; 
+}
+
+/* Styling for multiple images in a post */
+.post-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 5px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-images-grid img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Styling for single images within posts (if they are wrapped in an anchor) */
+.post .post-image-link {
+    display: block; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    overflow: hidden; 
+}
+
+.post .post-image-link img.post-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 0; 
+}
+
+
+/* Post Stats (Likes, Comments, Shares Count) */
+.post-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #65676b;
+    padding: 10px 0;
+    border-top: 1px solid #f0f2f5; 
+    border-bottom: 1px solid #f0f2f5;
+    margin: 10px 0;
+}
+
+.post-stats span {
+    margin-left: 15px; /* Space between stats */
+}
+
+/* Post Actions (Like, Comment, Share Buttons) */
+.post-actions {
+    display: flex;
+    justify-content: space-around; /* Distribute buttons */
+    padding-top: 5px;
+}
+
+.post-actions .action-btn {
+    background-color: transparent;
+    border: none;
+    color: #65676b;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    flex: 1; /* Make buttons take equal space */
+    justify-content: center;
+}
+
+.post-actions .action-btn:hover {
+    background-color: #f2f2f2;
+    color: #1c1e21;
+}
+
+.post-actions .action-btn .fa-thumbs-up {
+    color: #65676b; /* Default color */
+}
+
+/* Footer - تذييل الصفحة */
+footer {
+    background-color: #fff;
+    color: #65676b;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+footer a {
+    color: #4267B2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design - استجابة التصميم */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .profile-picture-container {
+        bottom: -30px;
+        right: 20px;
+        width: 120px;
+        height: 120px;
+    }
+    .page-info {
+        padding: 40px 20px 10px;
+    }
+    .page-info h1 {
+        font-size: 1.8em;
+    }
+    .page-info p {
+        font-size: 1.2em;
+    }
+    .page-nav {
+        padding: 0 20px;
+        justify-content: space-around; /* Distribute tabs evenly */
+    }
+    .page-nav a {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+    .main-content {
+        flex-direction: column; /* Stack columns */
+        padding: 10px;
+    }
+    .left-column, .right-column {
+        min-width: unset;
+        width: 100%;
+    }
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for photos */
+    }
+    .facebook-header .right img[src*="search.png"] { /* Target specific search icon for smaller screens */
+        right: calc(15px + 5px); /* Adjusted position */
+        width: 20px;
+        height: 20px;
+        padding-top: 0;
+    }
+    .facebook-header input[type="text"] {
+        padding-left: 35px; /* Adjust padding for smaller screens */
+        width: 150px;
+    }
+    .post-images-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller images on mobile */
+    }
+}
